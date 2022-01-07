@@ -5,11 +5,17 @@ $bg-color: rgb(22, 27, 34);
 
 .navbar {
     background-color: $bg-color;
+
+    #side-nav-toggle {
+        cursor: pointer;
+        font-size: 25px;
+    }
 }
 
 .navbar-brand {
     font-family: "Spartan", sans-serif;
     font-weight: bold;
+    margin: 0 1rem;
 
     .logo {
         max-height: 28px;

@@ -1,13 +1,48 @@
 .side-nav {
     padding: 10px;
     width: 150px;
-    background-color: #888;
-    height: calc(100vh - 95px);
+    background-color: rgba(0,0,0,0.6);
+    height: calc(100vh - 58px);
     position: fixed;
-    margin: 1rem 0 0 1rem;
+    margin: 0;
+    left: 0;
+    transition:left 0.2s linear;
+
+    &.closed {
+        left: -150px;
+    }
 }
 
 .side-nav-item {
+    align-items: stretch;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    width: 100%;
+    height: 40px;
+    min-height: 40px;
+
+    span {
+        align-items: center;
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 1;
+        min-width: 24px;
+        width: 75%;
+
+        div {
+            align-items: center;
+            display: flex;
+            flex-shrink: 0;
+            height: 100%;
+            justify-content: center;
+
+            i {
+                font-size: 18px;
+            }
+        }
+    }
+
     &:hover {
         color: var(--dark-text-accent);
     }
