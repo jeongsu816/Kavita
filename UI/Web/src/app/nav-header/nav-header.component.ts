@@ -82,6 +82,17 @@ export class NavHeaderComponent implements OnInit, OnDestroy {
     document.getElementById('content')?.focus();
   }
 
+  hideSideNav() {
+    const sideNav = this.document.querySelector('.side-nav');
+    if (sideNav?.classList.contains('closed')){
+      sideNav?.classList.remove('closed');
+      this.navService.showSideNav();
+    } else {
+      sideNav?.classList.add('closed');
+      this.navService.hideSideNav();
+    }
+  }
+
   onChangeSearch(val: string) {
       this.isLoading = true;
       this.searchTerm = val.trim();
